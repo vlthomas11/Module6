@@ -7,12 +7,13 @@ class MyTestClass(unittest.TestCase):
         self.assertEqual(topic4.score_input('vickilee', 10), 'vickilee : 10')
 
     def test_score_input_test_score_below_range(self):
-        self.assertEqual()
+        self.assertEqual(topic4.score_input('vickilee',110),'Invalid test score, try again')
 
     def test_score_input_test_score_above_range(self):
         self.assertEqual(topic4.score_input('vickilee', 110), 'Invalid test score, try again')
-    # def test_test_score_non_numeric(self):
-    #     self.assertEqual()
+
+    def test_test_score_non_numeric(self):
+        self.assertEqual(topic4.score_input('vickilee','hello'), 'Invalid test score, try again')
 
 
 if __name__ == '__main__':
